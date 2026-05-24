@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROPAINT - Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="login-page">
+
+  <!-- HEADER (mismo header pero más compacto para login) -->
+  <header class="login-header">
+    <nav>
+      <div class="logo-container">
+        <img src="/publics/imgs/propaint.png" alt="PROPAINT Logo" />
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#contacto" class="btn-header">Cotiza Ahora</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- LOGIN -->
+  <main class="login-layout">
+    <!-- Izquierda: imagen -->
+    <section class="login-visual" aria-label="Imagen de bienvenida">
+      <img src="/publics/imgs/fondo login propaint.png" alt="Ilustración Propaint" />
+    </section>
+
+    <!-- Derecha: form -->
+    <section class="login-panel" aria-label="Formulario de Login">
+      <div class="login-card">
+        <h1>Login</h1>
+        <p>Ingresa tus credenciales para continuar</p>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="login-field">
+            <label for="email">Correo electrónico</label>
+            <div class="login-input">
+              <span class="login-icon">👤</span>
+              <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+            </div>
+            <small class="login-error" data-error="email"></small>
+          </div>
+
+          <div class="login-field">
+            <label for="password">Contraseña</label>
+            <div class="login-input">
+              <span class="login-icon">🔒</span>
+              <input type="password" id="password" name="password" placeholder="••••••••" required minlength="6">
+              <button type="button" class="login-toggle" id="togglePassword" aria-label="Mostrar/ocultar contraseña">👁️</button>
+            </div>
+            <small class="login-error" data-error="password"></small>
+          </div>
+
+          <div class="login-row">
+            <label class="login-check">
+              <input type="checkbox" id="remember">
+              <span>Recordarme</span>
+            </label>
+
+            <a class="login-link" href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button class="login-btn" type="submit">Iniciar sesión</button>
+
+          <p class="login-foot">
+            ¿No tienes cuenta? <a class="login-link" href="#">Crear cuenta</a>
+          </p>
+
+          <p class="login-msg" id="formMsg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
